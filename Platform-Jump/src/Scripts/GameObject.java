@@ -36,4 +36,17 @@ public class GameObject {
         double screenY = y + height / 2;
         StdDraw.picture(screenX, screenY, image, width, height);
     }
+
+    public double getX() {
+        return this.x;
+    }
+
+    public double getY() {
+        return this.y;
+    }
+
+    public void move(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
 }

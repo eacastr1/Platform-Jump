@@ -12,6 +12,7 @@ public class Game {
     private boolean over;
     private int level;
     private Scene scene;
+    private Controller controller;
 
     /**
      * Create a new Platform Game
@@ -22,13 +23,16 @@ public class Game {
         world = new World();
         String[][] map = world.getLevel(level);
         this.scene = new Scene(map);
+        Player player = scene.getPlayer();
+        this.controller = new Controller(player);
     }
 
     /**
      * Game update code
      */
     public void update() {
-
+        controller.update();
+        scene.update();
     }
 
     /**

@@ -57,4 +57,12 @@ public class Scene {
             this.player = new Player(x, y);
         }
     }
+
+    public Player getPlayer() {
+        return this.player;
+    }
+
+    public void update() {
+        player.update();
+    }
 }
