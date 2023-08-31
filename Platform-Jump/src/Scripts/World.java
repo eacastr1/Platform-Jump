@@ -1,6 +1,11 @@
+/**
+ * <h1></h1>
+ * <p></p>
+ *
+ * @author Eddie Castro
+ */
 package Scripts;
 
-import java.io.File;
 import java.util.Scanner;
 
 public class World {

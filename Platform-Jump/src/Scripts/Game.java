@@ -1,3 +1,9 @@
+/**
+ * <h1></h1>
+ * <p></p>
+ *
+ * @author Eddie Castro
+ */
 package Scripts;
 
 public class Game {
