@@ -1,6 +1,6 @@
 /**
- * <h1></h1>
- * <p></p>
+ * <h1>Game.java</h1>
+ * <p>The Runner class for Platform Jump.</p>
  *
  * @author Eddie Castro
  */
@@ -9,10 +9,10 @@ package Scripts;
 public class Game {
 
     private World world;
-    private boolean over;
-    private int level;
     private Scene scene;
     private Controller controller;
+    private boolean over;
+    private int level;
 
     /**
      * Create a new Platform Game
@@ -33,6 +33,18 @@ public class Game {
     public void update() {
         controller.update();
         scene.update();
+        this.over = scene.isPlayerDead();
+        if(scene.getExit().isTouching(scene.getPlayer())) {
+            this.level++;
+            if(this.level < world.getLength()) {
+                String[][] map = world.getLevel(this.level);
+                this.scene = new Scene(map);
+                this.controller = new Controller(this.scene.getPlayer());
+            }
+            else {
+                this.over = true;
+            }
+        }
     }
 
     /**

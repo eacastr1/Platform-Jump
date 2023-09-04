@@ -1,6 +1,6 @@
 /**
- * <h1></h1>
- * <p></p>
+ * <h1>World.java</h1>
+ * <p>The World class, sets the level world mapping.</p>
  *
  * @author Eddie Castro
  */
@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class World {
 
-    // [count][x][y]
+    // [count][y][x]
     private String[][][] levels;
 
     /**
@@ -54,9 +54,13 @@ public class World {
     /**
      * Gets level.
      * @param level Level to get.
-     * @return Level.
+     * @return The World's current level.
      */
     public String[][] getLevel(int level) {
         return levels[level];
+    }
+
+    public int getLength() {
+        return this.levels.length;
     }
 }

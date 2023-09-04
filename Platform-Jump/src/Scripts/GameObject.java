@@ -1,6 +1,6 @@
 /**
- * <h1></h1>
- * <p></p>
+ * <h1>GameObject.java</h1>
+ * <p>A concrete class for GameObjects in the scene.</p>
  *
  * @author Eddie Castro
  */
@@ -43,6 +43,17 @@ public class GameObject {
 
     public double getY() {
         return this.y;
+    }
+
+    public int getWidth() {
+        return this.width;
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public void move(double x, double y) {
